@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SJ - Log in</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../public/css/styles.css">
+    <link rel="stylesheet" href="../public/css/view.css">
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        #container {
+            background-color: white;
+            grid-template-columns: 1fr !important;
+            width: 500px;
+            margin: auto;
+            margin-top: 50px;
+            border-radius: 2px;
+        }
+        h1 {
+            position:  static !important;
+            text-align: center !important;
+            height: 0;
+        }
+        form {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 10px;
+            color: black;
+            padding: 20px;
+        }
+        form * {
+            padding: 10px !important;
+        }
+        span {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+        }
+        input {
+            width: 80%;
+            text-align: center;
+        }
+        button {
+            transform: none !important;
+            padding: 20px !important;
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <article>
+            <div id="container">
+                <h1>Sign In</h1>
+                <form action="/index">
+                    <span>
+                        <p>Username:</p> <input type="text" name="" id="">
+                    </span>
+                    <span>
+                        <p>Password:</p> <input type="password" name="" id="">
+                    </span>
+                    <button type="submit">Sign In</button>
+                </form>
+            </div>
+        </article>
+    </section>
+
+
+    
+</body>
+</html>

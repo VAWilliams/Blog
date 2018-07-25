@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Montserrat','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  overflow: hidden;
+  overflow-y: auto; }
+
+#buttonBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+
+button {
+  background-color: #4b7485;
+  border: none;
+  padding: 5px;
+  border-radius: 2px;
+  transition: all 600ms ease; }
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.05); }
+
+a {
+  text-decoration: none; }
+
+header {
+  background-image: url(/images/Blur-Wallpapers-27-1680-x-1050.jpg);
+  background-size: cover;
+  padding: 10px; }
+
+nav {
+  display: grid;
+  grid-template-columns: 150px 1fr 200px;
+  background-color: white;
+  padding: 0 15px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  box-shadow: 0 0 1px #4b7485; }
+  nav div {
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    height: 30px;
+    padding: 20px 0; }
+    nav div input {
+      text-align: center;
+      border: none;
+      box-shadow: 0 0 5px rgba(128, 128, 128, 0.1);
+      border-radius: 50px 0 0 50px; }
+    nav div button {
+      position: relative;
+      left: -15px;
+      width: 30px;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      box-shadow: 0 0 5px rgba(128, 128, 128, 0.1); }
+  nav img {
+    height: 50px;
+    padding: 10px; }
+  nav ul {
+    text-align: center;
+    padding: 26px;
+    margin: 0;
+    word-spacing: 10px; }
+    nav ul li {
+      display: inline; }
+      nav ul li a {
+        text-decoration: none;
+        color: #4b7485; }
+
+.container {
+  background-image: url(/images/Blur-Wallpapers-27-1680-x-1050.jpg);
+  background-size: cover;
+  padding-bottom: 30px; }
+  .container article {
+    display: grid;
+    position: relative;
+    padding: 20px 0;
+    grid-gap: 30px; }
+    .container article .title {
+      font-size: 15px;
+      padding-bottom: 30px;
+      color: rgba(255, 255, 255, 0.9); }
+      .container article .title h1 {
+        font-size: 40px;
+        margin-bottom: 10px; }
+    .container article #img {
+      background-image: url("/images/strings-closeup-photo-cut-away-wallpaper.jpg");
+      padding: 100px;
+      background-size: cover; }
+    .container article .cut {
+      overflow: hidden; }
+    .container article span {
+      overflow: hidden;
+      background-color: rgba(90, 90, 90, 0.1);
+      border-radius: 2px;
+      box-shadow: 0 1px 1px rgba(255, 255, 255, 0.9); }
+    .container article p {
+      padding: 50px; }
+  .container section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    text-align: center;
+    margin: 0 10%;
+    margin-top: 10px; }
+    .container section h1 {
+      font-size: 25px; }
+    .container section .post-wrap:first-of-type {
+      position: relative;
+      z-index: 1;
+      margin-top: -20px;
+      grid-column: 1/4;
+      padding-bottom: 60px; }
+
+.post {
+  display: grid;
+  color: #6ca6be;
+  background-color: rgba(90, 90, 90, 0.1);
+  padding: 2% 5%;
+  border-top: 2px #4b7485 solid;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.9); }
+  .post:hover > h1 {
+    transform: scale(1.05); }
+  .post h1 {
+    color: rgba(255, 255, 255, 0.9);
+    transition: all 1000ms ease-out; }
+  .post .post-bottom {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    width: 80%;
+    margin: auto; }
+    .post .post-bottom span, .post .post-bottom button {
+      padding: 10px;
+      transition: all 500ms ease-out; }
+    .post .post-bottom button {
+      position: relative;
+      background-color: #4b7485;
+      color: white;
+      box-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+      border: none;
+      border-radius: 2px;
+      width: 90px;
+      height: 40px; }
+      .post .post-bottom button span {
+        position: absolute;
+        left: 0;
+        top: 2px;
+        bottom: 0; }
+
+.main {
+  background-color: #4b7485;
+  padding: 20px; }
+  .main a {
+    color: white; }
+
+footer {
+  color: #4b7485;
+  padding: 10px;
+  font-size: 14px; }
+
+/*# sourceMappingURL=styles.css.map */

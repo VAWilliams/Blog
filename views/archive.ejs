@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SJ - Archive</title>
+    <link rel="icon" type="" href="./images/LogoSample_ByTailorBrands.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="" href="./images/LogoSample_ByTailorBrands.ico">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <style>
+        .container section {
+            grid-template-columns: 1fr !important;
+            margin-top: 0 !important;
+        }
+        .container section .post-wrap:first-of-type {
+            grid-column: 1/2 !important;
+        }
+        .post-wrap {
+            padding: 0 !important;
+        }
+        .post-wrap .post {
+            grid-template-columns: 1fr 110px !important;
+            padding: 0 !important;
+        }
+        .post-wrap .post h1 {
+            font-size: 20px !important;
+        }
+        .post-wrap .post-bottom {
+            grid-template-columns: 1fr !important;
+        }
+        .post-wrap .post-bottom span  {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <% include templates/header.ejs %>
+
+        <section class="container">
+
+
+            <section>
+
+                <h1>Archive</h1>
+
+                <% if (data.length != 0) { %>
+                <% data.forEach(function(data){ %>
+
+                    <div class="post-wrap">
+
+                        <div class="post">
+
+                            <h1>
+                                <%= data.title %>
+                            </h1>
+                            <div class="post-bottom">
+                                <span><%= data.timeDate %></span>
+                                    <%- `<a href=/view/${data.id}>` %>
+                                        <button>
+                                            Read More
+                                        </button>
+                                    </a>
+                                
+                                    
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                <% }) %>
+                <% } else { %>
+                    <p>You have no posts yet.</p>
+                <% } %>
+            </section>
+
+
+
+        </section>
+
+        <% include templates/footer.ejs %>
+
+        <script src="js/script.js"></script>
+        <script>
+        </script>
+        
+
+</body>
+
+</html>

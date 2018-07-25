@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>none</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <header class="container panel panel-default">
+    <div class="row ">
+      <h1 class="jumbotron">
+        Blog
+      </h1>
+    </div>
+
+    <div class="row">
+      <button class="btn btn-default col-xs-3">View Archive</button>
+    </div>
+    <div class="row panel panel-primary">
+      <nav class="panel-heading">
+        <ul>
+          <li>This</li>
+          <li>Is</li>
+          <li>The</li>
+          <li>Nav</li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+  <div class="container">
+    <div class="row">
+
+      <% if (data.length != 0) { %>
+        <% data.forEach(function(data){ %>
+
+          <div class="panel panel-primary col-xs-12 col-md-6 col-lg-4">
+            <h3 class="text-center text-capitalize panel-heading">
+              <%= data.title %>
+            </h3>
+            <p class="text-center panel-body">by
+              <%= data.author %>
+            </p>
+          </div>
+
+      <% }); %>
+      <% } else { %>
+        <p>You have no data yet.</p>
+      <% } %>
+
+    </div>
+
+  </div>
+
+
+
+</body>
+
+</html>

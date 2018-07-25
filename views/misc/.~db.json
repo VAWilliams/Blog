@@ -1,0 +1,55 @@
+{
+  "posts": [
+    {
+      "lable": "2017.06.12",
+      "id": 1,
+      "title": "How Bob died",
+      "timedate": "10:13:34 12 Jun 2017",
+      "content": "A Pug's Life",
+      "image": "",
+      "author": "theCluelessChap"
+    },
+    {
+      "lable": "2017.06.12",
+      "id": 2,
+      "title": "An ouma Tale",
+      "timedate": "10:13:34 12 Jun 2017",
+      "content": "A Pug's Life",
+      "image": "",
+      "author": "theCluelessChap"
+    },
+    {
+      "lable": "2017.06.12",
+      "id": 3,
+      "title": "Why I don't Bootstrap",
+      "timedate": "10:13:34 12 Jun 2017",
+      "content": "no time for pug",
+      "image": "",
+      "author": "theCluelessChap"
+    },
+    {
+      "lable": "2017.06.12",
+      "id": 4,
+      "title": "Oumas without wings",
+      "content": "<p>ridhaa is stupi, wait that doesnt come close</p>",
+      "image": "",
+      "author": "Your father"
+    },
+    {
+      "lable": "2017.06.12",
+      "id": 5,
+      "title": "Where to find rocks",
+      "content": "<p>I really dont know</p>",
+      "image": "",
+      "author": "Your father"
+    },
+    {
+      "id": 6,
+      "title": "Where the Oumas hide",
+      "datetime": "shlaah",
+      "content": "<p>In the clouds</p>",
+      "image": "",
+      "author": "Jeff"
+    }
+  ]
+}

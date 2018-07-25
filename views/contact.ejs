@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    SJ - Contact
+  </title>
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="icon" type="" href="./images/LogoSample_ByTailorBrands.ico">
+  <!-- include libraries(jQuery, bootstrap) -->
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+
+  <!-- include summernote css/js -->
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
+
+  <link rel='stylesheet' href='css/styles.css' />
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+  <style>
+    form {
+      padding: 30px 20% !important;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+      background-image: url(/images/Blur-Wallpapers-27-1680-x-1050.jpg);
+    }
+    form .message {
+      grid-column: 1/4;
+    }
+    form textarea {
+      width: 100%;
+      height: 400px;
+      padding: 30px;
+      color: grey;
+    }
+    form .button {
+      grid-column: 2/3;
+    }
+    nav img {
+      height: 65px;
+    }
+    nav ul {
+      padding: 22px !important;
+    }
+    nav div {
+      padding: 18px 0 !important;
+      height: 100% !important;
+    }
+  </style>
+</head>
+
+<body>
+
+    <% include templates/header.ejs %>
+
+  <form action="/send" method="GET">
+
+    <div class="input-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" placeholder="Name" id="name" name="name">
+    </div>
+
+    <div class="input-group">
+      <label for="surname">Surname</label>
+      <input type="text" class="form-control" placeholder="Surname" id="surname" name="surname">
+    </div>
+
+    <div class="input-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" placeholder="Email" id="email" name="email">
+    </div>
+
+    <div class="input-group message">
+      <textarea name="message" placeholder="Type a message..."></textarea>
+    </div>
+
+    <div class="input-group button">
+      <input type="submit" class="btn btn-primary" value="Send">
+    </div>
+
+  </form>
+
+  <% include templates/footer.ejs %>
+
+  <script>
+    $('.main').hide();
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+﻿$image: url('/images/acoustic-acoustic-guitar-blur-230800.jpg');
+$topImage: url('/images/Blur-Wallpapers-27-1680-x-1050.jpg');
+$softBlue: #6ca6be;
+$strongBlue: #4b7485;
+$blendWhite: rgba(255, 255, 255, 0.9);
+$trueWhite: rgba(255, 255, 255, 0.2);
+$addGrey: rgba(90, 90, 90, 0.1);
+
+
+
+
+
+body {
+    margin: 0;
+    color: $blendWhite;
+    // font-family: , sans-serif;
+    font-family: 'Montserrat','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+#buttonBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+button {
+    background-color: $strongBlue;
+    border: none;
+    padding: 5px;
+    border-radius: 2px;
+    transition: all 600ms ease;
+}
+button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-image: url(/images/Blur-Wallpapers-27-1680-x-1050.jpg);
+    background-size: cover;
+    padding: 10px;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 150px 1fr 200px;
+    background-color: white;
+    padding: 0 15px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 0 1px $strongBlue;
+    div {
+        display: grid;
+        grid-template-columns: 1fr 30px;
+        height: 30px;
+        padding: 20px 0;
+        input {
+            text-align: center;
+            border: none;
+            box-shadow: 0 0 5px rgba(128, 128, 128, 0.1);
+            border-radius: 50px 0 0 50px;
+        }
+        button {
+            position: relative;
+            left: -15px;
+            width: 30px;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(128, 128, 128, 0.1);
+        }
+    }
+    img {
+        height: 50px;
+        padding: 10px;
+    }
+    ul {
+        text-align: center;
+        padding: 26px;
+        margin: 0;
+        word-spacing: 10px;
+        li {
+            display: inline;
+            a {
+                text-decoration: none;
+                color: $strongBlue;
+            }
+        }
+    }
+}
+
+
+
+.container {
+    // background-color: rgba(255, 255, 255, 0.2);
+    background-image: url(/images/Blur-Wallpapers-27-1680-x-1050.jpg);
+        background-size: cover;
+        padding-bottom: 30px;
+    article {
+        display: grid;
+        position: relative;
+        padding: 20px 0;
+        grid-gap: 30px;
+        .title {
+            font-size: 15px;
+            padding-bottom: 30px;
+            color: $blendWhite;
+            h1 {
+                font-size: 40px;
+                margin-bottom: 10px;
+            }
+        }
+        #img {
+            background-image: url('/images/strings-closeup-photo-cut-away-wallpaper.jpg');
+            padding: 100px;
+            background-size: cover;
+        }
+        .cut {
+            overflow: hidden;
+        }
+        span {
+            overflow: hidden;
+            background-color: $addGrey;
+            border-radius: 2px;
+            box-shadow: 0 1px 1px $blendWhite;
+        }
+        p {
+            padding: 50px;
+        }
+    }
+    section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 30px;
+        text-align: center;
+        margin: 0 10%;
+        margin-top: 10px;
+        h1 {
+            font-size: 25px;
+        }
+        .post-wrap:first-of-type {
+            position: relative;
+            z-index: 1;
+            margin-top: -20px;
+            grid-column: 1/4;
+            padding-bottom: 60px;
+        }
+    }
+}
+
+
+
+
+.post {
+    display: grid;
+    color: $softBlue;
+    background-color: $addGrey;
+    padding: 2% 5%;
+    border-top: 2px $strongBlue solid;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px $blendWhite;
+    &:hover > h1 {
+        transform: scale(1.05);
+    }
+    h1 {
+        color: $blendWhite;
+        transition: all 1000ms ease-out;
+    }
+    .post-bottom {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        width: 80%;
+        margin: auto;
+        span, button {
+            padding: 10px;
+            transition: all 500ms ease-out;
+        }
+        button {
+            position: relative;
+            background-color: $strongBlue;
+            color: white;
+            box-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+            border: none;
+            border-radius: 2px;
+            width: 90px;
+            height: 40px;
+            span {
+                position: absolute;
+                left: 0;
+                top: 2px;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+.main {
+    background-color: $strongBlue;
+    padding: 20px;
+    a {
+        color: white;
+    }
+}
+
+footer {
+    color: $strongBlue;
+    padding: 10px;
+    font-size: 14px;
+}

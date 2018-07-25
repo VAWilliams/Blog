@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SJ - View</title>
+    <link rel="icon" type="" href="./images/LogoSample_ByTailorBrands.ico">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="/css/view.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <style>
+        #text {
+            margin: 0 !important;
+            padding: 20px !important;
+        }
+        #text span {
+            margin: 0 !important;
+        }
+        a button span {
+            box-shadow: none !important;
+            font-size: 20px !important;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <% include templates/header.ejs %>
+
+        <section class="container">
+            <article>
+
+                <div id="container">
+                    
+
+                    <span>
+                        <div id="img">
+                            <div class="title">
+                                <h1>
+                                    <%= selected.title %>
+                                </h1>
+                            </div>
+                        </div>
+                    
+                        <span id="text">
+                        <span style="height: 200px; overflow: hidden; width=100%; filter: grayscale(100%); box-shadow: none; display: grid; background-image: url(<%= selected.url %>); background-size: cover;">
+                            <img src=<%= selected.url %> alt="" width="300px" style="margin: auto;">
+                        </span>
+                            <%- selected.content %>
+                        </span>
+                        <div id="buttonBox">
+                        
+                            <a href="/update/<%= selected.id %>" name="<%= selected.id %>"  id="update">
+                                <button>
+                                    <span><i class="fas fa-pen"></i></span>
+                                </button>
+                            </a>
+
+                            <a href="/delete/<%= selected.id %>" id="delete">
+                                <!-- oldHref(href="/delete/<%= selected.id %>") -->
+                            <div name="id" value="<%= selected.id %>"></div>
+                                <button>
+                                    <span><i class="fas fa-trash"></i></span>
+                                </button>
+                            </a>
+
+                        </div>
+                    </span>
+
+
+                </div>
+
+            </article>
+        </section>
+
+        <% include templates/footer.ejs %>
+
+        <script src="/js/script.js"></script>
+
+
+</body>
+
+</html>

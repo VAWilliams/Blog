@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    SJ - Create
+  </title>
+  <link rel="icon" type="" href="./images/LogoSample_ByTailorBrands.ico">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <!-- include libraries(jQuery, bootstrap) -->
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+
+  <!-- include summernote css/js -->
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
+
+  <link rel='stylesheet' href='css/styles.css' />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+  <style>
+    form {
+      padding: 30px !important;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+      background-image: url(/images/Blur-Wallpapers-27-1680-x-1050.jpg);
+    }
+    .summernote {
+      grid-column: 1/4;
+    }
+    .button {
+      grid-column: 2/3;
+    }
+    nav img {
+      height: 65px;
+    }
+    nav ul {
+      padding: 22px !important;
+    }
+    nav div {
+      padding: 18px 0 !important;
+      height: 100% !important;
+    }
+  </style>
+</head>
+
+<body>
+
+    <% include templates/header.ejs %>
+
+  <form action="/create" method="POST">
+
+    <div class="input-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" placeholder="Title" id="title" name="title">
+    </div>
+
+    <div class="input-group">
+      <label for="author">Author</label>
+      <input type="text" class="form-control" placeholder="Author" id="author" name="author">
+    </div>
+
+    <div class="input-group">
+      <label for="datetime">Image URL</label>
+      <input type="text" class="form-control" placeholder="URL" id="url" name="url">
+    </div>
+
+    <div class="input-group summernote">
+      <textarea id="summernote" name="content"></textarea>
+    </div>
+
+    <div class="input-group button">
+      <input type="submit" class="btn btn-primary" value="Submit">
+    </div>
+
+  </form>
+
+  <% include templates/footer.ejs %>
+
+  <script>
+    $(document).ready(function() {
+      let winHeight = window.innerHeight;
+      $('#summernote').summernote({
+        tabsize: 2,
+        height: winHeight - 350
+      });
+    });
+  </script>
+
+</body>
+
+</html>
