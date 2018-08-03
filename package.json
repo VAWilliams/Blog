@@ -21,9 +21,17 @@
     "popper.js": "^1.14.3",
     "session": "^0.1.0"
   },
-  "main": "app.js",
+  "main": "./bin/www",
   "devDependencies": {},
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VAWilliams/my_blog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VAWilliams/my_blog/issues"
+  },
+  "homepage": "https://github.com/VAWilliams/my_blog#readme",
   "description": ""
 }
